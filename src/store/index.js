@@ -9,13 +9,14 @@ export default createStore({
               nombre: "TimeInn",
               descripcion: "Proyecto en entorno cliente",
               repositorio: "https://github.com/santimb96/timeInn_p2",
-              imagen: "../assets/timeinn.png"
+              imagen: "../../img/timeinn.png"
           },
   
           {
-              nombre: "ToyWars",
-              descripcion: "Proyecto en cliente/servidor con JS, Java y SpringBoot",
-              repositorio: "https://github.com/santimb96/toyWars",
+              nombre: "Whatsagram",
+              descripcion: "Imitación de la app de WhatsApp sin interacción por parte de terceros y con determinadas funcionalidades",
+              repositorio: "https://github.com/santimb96/whatsagram_p1",
+              imagen: "../../img/whatsagram.png"
           }
       ]
   }

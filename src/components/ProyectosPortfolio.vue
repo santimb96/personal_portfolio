@@ -5,7 +5,7 @@
       v-for="portfolio in portfolios"
       :key="portfolio.id"
     >
-      <img :src="portfolio.imagen" :alt="portfolio.nombre" width="300px" height="300px"/> 
+      <img :src="portfolio.imagen" :alt="portfolio.nombre"/> 
       <h1>{{ portfolio.nombre }}</h1>
       <h3>{{ portfolio.descripcion }}</h3>
       <h4><a :href="portfolio.repositorio">Repositorio</a></h4>
