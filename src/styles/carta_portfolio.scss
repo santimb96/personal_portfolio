@@ -1,0 +1,27 @@
+// @import 'colores';
+
+%display_grid_mobile{
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+%display_flex_card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.proyectos {
+        @extend %display_grid_mobile;
+        gap: 3rem;
+        
+        .carta-proyecto{
+            @extend %display_flex_card;
+            flex-direction: column;
+            background: white;
+            padding: 3rem;
+            border: 2px black solid;
+            border-radius: 5px;
+        }
+    }
