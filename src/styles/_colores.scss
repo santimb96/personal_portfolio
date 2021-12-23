@@ -1,3 +1,22 @@
-*{
-    font-family: monospace;
-}
+/*
+COLORES DE FONDO
+*/
+$background: rgb(31, 6, 124);
+$background_enlace_nav: white;
+$background_carta_portfolio: white;
+$background_hover_enlace_carta: #1f067c;
+
+/*
+COLORES DE LETRAS
+*/
+$letras: white;
+$letras_carta: black;
+
+/*
+COLORES DE ENLACES
+*/
+
+$enlace_nav: white;
+$enlace_nav_action: black;
+$enlace_repositorio: black;
+$enlace_hover_carta: white;

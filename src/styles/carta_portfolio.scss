@@ -1,6 +1,8 @@
 // @import 'colores';
 // token prueba 
 
+@import 'colores';
+
 %display_grid_mobile {
   display: grid;
   grid-template-columns: 100%;
@@ -19,7 +21,7 @@
   .carta-proyecto {
     @extend %display_flex_card;
     flex-direction: column;
-    background: white;
+    background: $background_carta_portfolio;
     padding: 3rem;
     border: 2px black solid;
     border-radius: 5px;
@@ -32,7 +34,7 @@
 
     a {
       text-decoration: none;
-      color: black;
+      color: $letras_carta;
       transition: 0.3s;
       border: 2px solid black;
       padding: 0.3rem;
@@ -40,24 +42,24 @@
     }
 
     a:link {
-      color: black;
+      color: $enlace_repositorio;
     }
 
     a:visited {
-      color: black;
+      color: $enlace_repositorio;
     }
 
     a:focus {
-      color: #1f067c;
+      color: $background_hover_enlace_carta;
     }
 
     a:hover {
-      background: #1f067c;
-      color: white;
+      background: $background_hover_enlace_carta;
+      color: $enlace_hover_carta;
     }
 
     a:active {
-      color: #1f067c;
+      color: $background_hover_enlace_carta;
     }
   }
 }
