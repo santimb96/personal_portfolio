@@ -1,33 +1,62 @@
 // @import 'colores';
 
-%display_grid_mobile{
-    display: grid;
-    grid-template-columns: 100%;
+%display_grid_mobile {
+  display: grid;
+  grid-template-columns: 100%;
 }
 
-%display_flex_card{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+%display_flex_card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
 
 .proyectos {
-        @extend %display_grid_mobile;
-        gap: 3rem;
-        
-        .carta-proyecto{
-            @extend %display_flex_card;
-            flex-direction: column;
-            background: white;
-            padding: 3rem;
-            border: 2px black solid;
-            border-radius: 5px;
+  @extend %display_grid_mobile;
+  gap: 3rem;
 
-            img {
-                width: 300px;
-                height: 150px;
-                border: 2px black solid;
-            }
-        }
+  .carta-proyecto {
+    @extend %display_flex_card;
+    flex-direction: column;
+    background: white;
+    padding: 3rem;
+    border: 2px black solid;
+    border-radius: 5px;
+
+    img {
+      width: 300px;
+      height: 150px;
+      border: 2px black solid;
     }
+
+    a {
+      text-decoration: none;
+      color: black;
+      transition: 0.3s;
+      border: 2px solid black;
+      padding: 0.3rem;
+      border-radius: 5px;
+    }
+
+    a:link {
+      color: black;
+    }
+
+    a:visited {
+      color: black;
+    }
+
+    a:focus {
+      color: #1f067c;
+    }
+
+    a:hover {
+      background: #1f067c;
+      color: white;
+    }
+
+    a:active {
+      color: #1f067c;
+    }
+  }
+}

@@ -23,8 +23,6 @@ export default {
 
     const portfolios = store.getters.getPortfolio;
 
-    console.log(portfolios[0].imagen);
-
     return {
       portfolios,
     };
