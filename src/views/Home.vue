@@ -1,14 +1,9 @@
-<template>
-  <div class="home">
-    Soy home!
-  </div>
-</template>
-
 <script>
+import PresentacionHome from '../components/PresentacionHome.vue';
 
 export default {
-  name: "Home",
-  components: {
-  },
+  render () {
+    return <PresentacionHome />
+  }
 };
 </script>
