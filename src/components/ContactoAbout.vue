@@ -4,8 +4,8 @@
     <div class="links">
         
         <a href="https://github.com/santimb96"><i class="fab fa-github"></i></a>
-        <a href="https://github.com/santimb96"><i class="fas fa-envelope"></i></a>
-        <a href="https://github.com/santimb96"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:santiagomartinezbota@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/santi-martinez-bota/"><i class="fab fa-linkedin"></i></a>
         
     </div>
 </div>
