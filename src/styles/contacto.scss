@@ -23,6 +23,10 @@
         justify-content: space-between;
         flex-wrap: wrap;
 
+        a, a:link, a:visited, a:focus, a:hover, a:active {
+            color: $color_global_fa;
+        }
+
         .fa-github,  .fa-envelope, .fa-linkedin{
             font-size: 50px;
             padding: 1rem;
@@ -30,7 +34,7 @@
         }
 
         .fa-github:hover,  .fa-envelope:hover, .fa-linkedin:hover {
-            color: rgb(0, 102, 255);
+            color: $color_global_fa_hover;
         }
     }
 }
