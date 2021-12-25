@@ -1,4 +1,5 @@
 <template>
+<div class="contenedor-app-vue">
   <div id="nav">
     <router-link to="/">Presentación</router-link>  
     <router-link to="/proyectos">Proyectos</router-link>
@@ -6,6 +7,11 @@
     
   </div>
   <router-view />
+  <footer>
+        Santi Martínez, 2021
+  </footer>
+</div>
+  
 </template>
 
 <style lang="scss">

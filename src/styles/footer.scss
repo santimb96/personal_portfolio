@@ -1,0 +1,16 @@
+@import 'colores';
+
+.footer {
+    height: 100%;
+
+    footer {
+        font-weight: bold;
+        padding: 1rem;
+        text-align: center;
+        color: $letras_footer;
+        background: $background_footer;
+        margin-bottom: 0;
+    }
+}
+
+
