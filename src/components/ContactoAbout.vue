@@ -2,9 +2,11 @@
 <div class="contenedor-padre">
     <h1>¡Contáctame!</h1>
     <div class="links">
-        <i class="fab fa-github"></i>
-        <i class="fas fa-envelope"></i>
-        <i class="fab fa-linkedin"></i>
+        
+        <a href="https://github.com/santimb96"><i class="fab fa-github"></i></a>
+        <a href="https://github.com/santimb96"><i class="fas fa-envelope"></i></a>
+        <a href="https://github.com/santimb96"><i class="fab fa-linkedin"></i></a>
+        
     </div>
 </div>
   
