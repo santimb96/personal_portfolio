@@ -1,21 +1,21 @@
 <template>
   <div class="proyectos">
     <div
-      class="carta-proyecto"
-      v-for="portfolio in portfolios"
-      :key="portfolio.id"
+        class="carta-proyecto"
+        v-for="portfolio in portfolios"
+        :key="portfolio"
     >
-      <img :src="portfolio.imagen" :alt="portfolio.nombre"/> 
+      <img :src="portfolio.imagen" :alt="portfolio.nombre"/>
       <h1>{{ portfolio.nombre }}</h1>
       <h3>{{ portfolio.descripcion }}</h3>
       <h4><a :href="portfolio.repositorio">Repositorio</a></h4>
-      
+
     </div>
   </div>
 </template>
 
 <script>
-import { useStore } from "vuex";
+import {useStore} from "vuex";
 
 export default {
   setup() {
@@ -31,6 +31,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-    @import "../styles/carta_portfolio.scss";
+@import "../styles/carta_portfolio.scss";
 </style>
 

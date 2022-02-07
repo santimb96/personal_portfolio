@@ -1,8 +1,6 @@
-// @import 'colores';
-// token prueba 
-
 @import 'colores';
 @import 'margin';
+@import 'breakpoint';
 
 %display_grid_mobile {
   display: grid;
@@ -14,6 +12,8 @@
   justify-content: center;
   align-items: center;
 }
+
+
 
 .proyectos {
   @extend %display_grid_mobile;
@@ -27,6 +27,7 @@
     border: 2px black solid;
     border-radius: 5px;
     margin-bottom: $margin_bottom;
+
     img {
       width: 300px;
       height: 150px;
@@ -61,6 +62,48 @@
 
     a:active {
       color: $background_hover_enlace_carta;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-tablet) {
+
+  .proyectos {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+
+    .carta-proyecto{ 
+      width: 288px;
+      height: 361px;
+      transition: 0.25s;
+
+      img {
+        width: 300px;
+        height: 150px;
+      }
+    }
+
+    .carta-proyecto:hover{
+      transform: translateY(-10px);
+    }
+  }
+}
+
+@media (min-width: $breakpoint-desktop){
+  .proyectos {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .carta-proyecto{
+      width: 35%;
+
+      img {
+        width: 350px;
+        height: 180px;
+      }
     }
   }
 }
