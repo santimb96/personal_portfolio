@@ -18,6 +18,11 @@
 import {useStore} from "vuex";
 
 export default {
+  data () {
+    return {
+      numero: 0
+    }
+  },
   setup() {
     const store = useStore();
 
