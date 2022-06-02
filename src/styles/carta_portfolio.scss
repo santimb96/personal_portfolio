@@ -1,0 +1,174 @@
+@import 'colores';
+@import 'margin';
+@import 'breakpoint';
+
+%display_grid_mobile {
+  display: grid;
+  grid-template-columns: auto;
+  place-items: center;
+  gap: 5vh;
+}
+
+%display_flex_card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.proyectos {
+  transform: translateX(0);
+  animation-name: proyectos;
+  animation-duration: 0.5s;
+  position: absolute;
+  top: 10vh;
+  height: 70vh;
+  overflow-y: scroll;
+  width: 100%;
+  @extend %display_grid_mobile;
+  // margin-bottom: $margin_bottom;
+
+  .carta-proyecto {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto;
+    place-items: center;
+    // flex-direction: column;
+    background: $background_carta_portfolio;
+    padding: 3rem;
+    // border: 2px black solid;
+    border-radius: 5px;
+    height: 65vh;
+    margin: 0;
+    padding: 0;
+    width: 90%;
+    margin-bottom: 2vh;
+    .body{
+      position: absolute;
+      top: 30vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      h1{
+        font-size: 3ch;
+      }
+      h3{
+        font-size: 1.7ch;
+        width: 90%;
+      }
+    }
+    h1{
+      // position: absolute;
+      // top: 25vh;
+    }
+    h3{
+      // position: absolute;
+      // top: 20vh;
+      // margin-top: 20vh;
+      width: 100%;
+      text-align: center;
+    }
+    h4{
+      // position: absolute;
+      // top: 55vh;
+    }
+   // margin-bottom: $margin_bottom;
+
+    img {
+      border-radius: 5px 5px 0 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 40%;
+      object-fit: cover;
+      // border: 2px black solid;
+    }
+    button{
+      transition: 0.3s;
+      border: 2px solid black;
+      border-radius: 5px;
+      padding: 0.6rem;
+      margin: 0.5rem;
+      background: transparent;
+      transition: all .3s ease;
+    }
+    a {
+      text-decoration: none;
+      color: $letras_carta;
+    }
+
+    a:link {
+      color: $enlace_repositorio;
+    }
+
+    a:visited {
+      color: $enlace_repositorio;
+    }
+
+    a:focus {
+      color: $background_hover_enlace_carta;
+    }
+
+    button:hover {
+      background: $background_hover_enlace_carta;
+      a{
+        color: $enlace_hover_carta;
+      }
+        
+    }
+
+    a:active {
+      color: $background_hover_enlace_carta;
+    }
+  }
+}
+@keyframes proyectos{
+  from{
+    transform: translateX(-100vw);
+  }
+  to{
+    transform: translateX(0);
+  }
+}
+
+@media (min-width: $breakpoint-tablet) {
+
+  .proyectos {
+    width: 100%;
+    left: 0;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    place-items: center;
+    gap: 15vw;
+
+    .carta-proyecto{ 
+      // width: 50%;
+      // width: 500px;
+      left: 5%;
+      width: 90%;
+      transition: 0.25s;
+      .body{
+        top: 35vh;
+        h1{
+          margin: 1%;
+        }
+        h3 {
+          width: 70%;
+        }
+      }
+
+      img {
+        width: 100%;
+        height: 250px;
+      }
+    }
+
+    .carta-proyecto:hover{
+      transform: translateY(-10px);
+    }
+  }
+}
+
+

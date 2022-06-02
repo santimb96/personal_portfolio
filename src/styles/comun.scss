@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap');
+@import 'colores';
+@import 'breakpoint';
+* {
+  font-family: 'Rajdhani', sans-serif;
+}
+
+// html, body {
+//   overflow-x: hidden;
+// }
+
+body {
+    background: $background;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.contenedor-app-vue {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+#nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase; 
+    font-size: 0.8rem;
+    position: absolute;
+    top: 0;
+    height: 10vh;
+    width: 100%;
+    a {
+        color: $enlace_nav;
+        font-weight: bold;
+        transition: 0.3s;
+        margin: 0.5rem;
+        padding: 0.2rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        border-radius: 5px;
+    }
+    
+    a:link {
+        color: $enlace_nav_action;
+      }
+      
+      a:visited {
+        color: $enlace_nav;
+      }
+      
+      a:focus {
+        background: $background_enlace_nav;
+        color: $enlace_nav_action;
+      }
+      
+      a:hover {
+        background: $background_enlace_nav;
+        color: $enlace_nav_action;
+      }
+      
+      a:active {
+        background: $background_enlace_nav;
+        color: $enlace_nav_action;
+      }
+
+      a, a:link, a:visited, a:focus, a:hover, a:active {
+        text-decoration:none;
+    }
+}
+
+
+  // footer {
+  //     padding-top: 2.5rem;
+  //     position: absolute;
+  //     width: 90%;
+  //     bottom: 0;   
+  //     font-weight: bold;
+  //     padding: 1rem;
+  //     text-align: center;
+  //     color: $letras_footer;
+  //     background: $background_footer;
+      
+  // }
+
+  footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-weight: bold;
+    padding: 1rem;
+    text-align: center;
+    color: $letras_footer;
+    background: $background_footer;
+  }
+
+  @media (min-width: $breakpoint-tablet){
+    #nav{
+      justify-content: center;
+      gap: 10vw;
+      font-size: 1.5rem;
+    }
+  }
+

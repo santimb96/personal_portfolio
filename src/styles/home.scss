@@ -1,0 +1,99 @@
+@import 'colores';
+@import 'margin';
+@import 'breakpoint';
+
+%display_grid {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+%display_flex_carta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor-presentacion {
+    position: absolute;
+    top: 10vh;
+    height: 70vh;
+    width: 100%;
+    overflow-y: scroll;
+    color: $letras;
+    //border: 1px solid white;
+
+    @extend %display_grid;
+
+    .presentacion-personal {
+        @extend %display_flex_carta;
+        //border: 2px solid white;
+        padding: 0.5rem;
+        flex-direction: column;
+
+        img {
+            width: 200px;
+            height: 200px;
+            border-radius: 150px;
+            border: 3px solid white;
+        }
+
+        h1 {
+            text-transform: uppercase;
+        }
+
+        h1, h4, h5 {
+            text-align: center;
+        }
+        h5{
+            text-align: justify;
+            width: 70%;
+        }
+    }
+
+    .lenguajes {
+        height: 40%;
+        text-align: center;
+        text-transform: uppercase;
+        display: grid;
+        grid-template-columns: auto;
+        place-items: center;
+    
+    
+        .imagenes{
+            width: 70%;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            place-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: $margin_bottom;
+    
+            ::v-deep h1{
+                text-transform: uppercase;
+            }
+    
+            ::v-deep img {
+                width: auto;
+                height: 40px;
+                
+            }
+    
+        }
+    }
+
+}
+@media (min-width: $breakpoint-tablet) {
+    .contenedor-presentacion {
+        height: 80vh;
+        display: grid;
+        grid-template-columns: auto;
+        place-items: center;
+        font-size: 3ch;
+        .presentacion-personal, .lenguajes{
+            width: 70%;
+            .imagenes{
+                grid-template-columns: auto auto auto auto auto auto;
+                
+            }
+        }
+    }
+}
