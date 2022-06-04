@@ -4,6 +4,11 @@
       class="carta-proyecto"
       v-for="portfolio in portfolios"
       :key="portfolio"
+      @click="
+        portfolio?.despliegue
+          ? goToUri(portfolio?.despliegue)
+          : goToUri(portfolio?.repositorio)
+      "
     >
       <img :src="portfolio.imagen" :alt="portfolio.nombre" />
       <div class="body">
@@ -22,6 +27,12 @@
 import { useStore } from "vuex";
 
 export default {
+  methods: {
+    goToUri(uri) {
+      window.open(uri, "_blank");
+    },
+  },
+
   data() {
     return {
       numero: 0,

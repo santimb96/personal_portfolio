@@ -18,13 +18,20 @@ export default createStore({
           despliegue: "https://music-project-wozzo-santimb96.vercel.app/",
           imagen: "../../img/spoticlone.png",
         },
-
         {
           nombre: "Whatsagram",
           descripcion:
             "Imitación de la app de WhatsApp sin interacción por parte de terceros y con determinadas funcionalidades",
           repositorio: "https://github.com/santimb96/whatsagram_p1",
           imagen: "../../img/whatsagram.png",
+        },
+        {
+          nombre: "Barquitos",
+          descripcion:
+            "Primer juego web desarrollado",
+          repositorio: "https://github.com/santimb96/barquitosJS",  
+          despliegue: "https://santimb96.github.io/barquitosJS/",
+          imagen: "../../img/barquitos.png",
         },
       ],
     },
