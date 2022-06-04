@@ -41,7 +41,7 @@ export default createStore({
       nombre: "Santi Martínez",
       puesto: "Desarrollador Web júnior",
       descripcion:
-        "¡Bienvenido a mi portfolio! Me llamo Santi, ¡encantado! Soy un desarrollador full-stack de Baleares al que le encanta programar y aprender nuevas teconologías y metodologías de trabajo. ¡Espero que te guste mi perfil!",
+        "¡Bienvenido a mi portafolio! Me llamo Santi, ¡encantado! Soy desarrollador full-stack que vive en Baleares al que le encanta programar y aprender nuevas teconologías y metodologías de trabajo. ¡Espero que te guste mi perfil!",
       lenguajes: [
         "../../img/js.png",
         "../../img/node.png",
