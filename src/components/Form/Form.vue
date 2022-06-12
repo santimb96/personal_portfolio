@@ -62,7 +62,13 @@ export default {
   },
   methods: {
     enviar() {
-      sendEmail(this.nombre, this.email, this.asunto, this.mensaje);
+      sendEmail(this.nombre, this.email, this.asunto, this.mensaje)
+        .then((response) => {
+          console.log(response);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     },
   },
 };
