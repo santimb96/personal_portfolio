@@ -1,16 +1,21 @@
 <template>
   <div class="contenedor-app-vue">
-    <div id="nav">
-      <router-link to="/">Presentación</router-link>
-      <router-link to="/proyectos">Proyectos</router-link>
-      <router-link to="/contacto">Contacto</router-link>
-    </div>
-    <router-view />
-    <footer>Santi Martínez, 2021</footer>
+    <Header></Header>
+    <Footer></Footer>
   </div>
 </template>
+<script>
+import Footer from "./components/Footer/Footer.vue";
+import Header from "./components/Header/Header.vue";
+
+export default {
+  components: {
+    Footer,
+    Header,
+  },
+};
+</script>
 
 <style lang="scss">
 @import "./styles/comun.scss";
-@import "./styles/footer.scss";
 </style>

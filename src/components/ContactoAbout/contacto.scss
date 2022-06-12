@@ -1,5 +1,5 @@
-@import 'colores';
-@import 'breakpoint';
+@import '../../styles/colores';
+@import '../../styles/breakpoint';
 
 %display_grid {
     display: grid;
@@ -26,12 +26,13 @@
     h1 {
         text-align: center;
         font-size: 5ch;
-        margin-top: 5vh;
+        margin-top: 1vh;
         padding: 0;
         display: flex;
         justify-content: center;
         align-items: center;
     }
+
 
     .links {
         display: grid;

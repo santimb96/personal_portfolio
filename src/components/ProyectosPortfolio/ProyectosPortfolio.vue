@@ -51,5 +51,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../styles/carta_portfolio.scss";
+@import "./carta_portfolio.scss";
 </style>

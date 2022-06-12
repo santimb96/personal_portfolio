@@ -1,5 +1,5 @@
 <script>
-import ContactoAbout from "../components/ContactoAbout.vue";
+import ContactoAbout from "../../components/ContactoAbout/ContactoAbout.vue";
 
 export default {
   render() {
@@ -7,4 +7,3 @@ export default {
   },
 };
 </script>
-
