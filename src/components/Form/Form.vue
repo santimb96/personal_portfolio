@@ -4,6 +4,7 @@
       <div class="form-group">
         <label for="nombre">Nombre</label>
         <input
+          v-model="nombre"
           type="text"
           class="form-control"
           id="nombre"
@@ -14,6 +15,7 @@
       <div class="form-group">
         <label for="email">Email</label>
         <input
+          v-model="email"
           type="email"
           class="form-control"
           id="email"
@@ -24,6 +26,7 @@
       <div class="form-group">
         <label for="email">Asunto</label>
         <input
+          v-model="asunto"
           type="asunto"
           class="form-control"
           id="asunto"
@@ -34,6 +37,7 @@
       <div class="form-group">
         <label for="mensaje">Mensaje</label>
         <textarea
+          v-model="mensaje"
           class="form-control"
           id="mensaje"
           rows="7"
@@ -45,6 +49,19 @@
     </div>
   </div>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      nombre: "",
+      email: "",
+      asunto: "",
+      mensaje: "",
+    };
+  },
+  methods: {},
+};
+</script>
 
 <style scoped lang="scss">
 @import "./form.scss";
