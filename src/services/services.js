@@ -1,13 +1,18 @@
+const emailPattern = new RegExp("[a-z0-9]+@[a-z]+.[a-z]{2,3}");
+
 const sendMail = (nombre, email, asunto, mensaje) =>
   new Promise((resolve, reject) => {
+    if (!nombre || !email || !asunto || !mensaje)
+      reject("Parámetros incorrectos");
+    if (!emailPattern.test(email)) reject("El emailno cumple con el formato");
     const msgData = {
-      nombre,
+      name: nombre,
       email,
-      asunto,
-      mensaje,
+      subject: asunto,
+      message: mensaje,
     };
 
-    fetch("http://localhost:3000/mail", {
+    fetch("https://mail-api.up.railway.app/mail", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
