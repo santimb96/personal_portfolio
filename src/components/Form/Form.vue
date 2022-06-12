@@ -45,11 +45,12 @@
           required
         ></textarea>
       </div>
-      <button type="submit" class="btn-submit">Enviar</button>
+      <button type="submit" class="btn-submit" @click="enviar()">Enviar</button>
     </div>
   </div>
 </template>
 <script>
+import sendEmail from "../../services/services.js";
 export default {
   data() {
     return {
@@ -59,7 +60,11 @@ export default {
       mensaje: "",
     };
   },
-  methods: {},
+  methods: {
+    enviar() {
+      sendEmail(this.nombre, this.email, this.asunto, this.mensaje);
+    },
+  },
 };
 </script>
 
