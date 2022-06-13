@@ -1,4 +1,5 @@
 <template>
+    <SnackbarInfo v-if="success"></SnackbarInfo>
   <div class="contact-form">
     <div class="form-body">
       <div class="form-group">
@@ -27,7 +28,7 @@
         <label for="email">Asunto</label>
         <input
           v-model="asunto"
-          type="asunto"
+          type="text"
           class="form-control"
           id="asunto"
           placeholder="Asunto por el que quieres contactarme..."
@@ -51,24 +52,57 @@
 </template>
 <script>
 import sendEmail from "../../services/services.js";
+import SnackbarInfo from "../SnackbarInfo/SnackbarInfo.vue";
+
 export default {
+  components: {
+    SnackbarInfo
+  },
   data() {
     return {
       nombre: "",
       email: "",
       asunto: "",
       mensaje: "",
+      emailPattern: new RegExp("[a-z0-9]+@[a-z]+.[a-z]{2,3}"),
+      success: true,
     };
   },
   methods: {
     enviar() {
-      sendEmail(this.nombre, this.email, this.asunto, this.mensaje)
-        .then((response) => {
-          console.log(response);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
+      if (this.validar()) {
+        sendEmail(this.nombre, this.email, this.asunto, this.mensaje)
+          .then((response) => {
+            this.success = true;
+            console.log(response);
+            this.limpiar();
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      } else {
+        console.error("no valida");
+      }
+    },
+    validar() {
+      if (
+        !this.nombre ||
+        !this.email ||
+        !this.asunto ||
+        !this.mensaje ||
+        !this.emailPattern.test(this.email)
+      ) {
+        return false;
+      } else {
+        return true;
+      }
+    },
+    limpiar() {
+      this.nombre = "";
+      this.email = "";
+      this.asunto = "";
+      this.mensaje = "";
+      this.success = false;
     },
   },
 };

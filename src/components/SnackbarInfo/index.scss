@@ -1,0 +1,42 @@
+@import '../../styles/breakpoint';
+
+.alert-container {
+  animation-name: alert-container-animation;
+  animation-duration: 0.5s;
+  position: fixed;
+  font-size: 2ch;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10%;
+}
+.alert-success{
+  width: 50%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  svg{
+    margin-left: 2%;
+  }
+}
+@keyframes alert-container-animation{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .alert-container{
+    font-size: 1.5ch;
+    .alert-success{
+      width: 80%;
+    }
+  }
+}

@@ -4,7 +4,7 @@ const sendMail = (nombre, email, asunto, mensaje) =>
   new Promise((resolve, reject) => {
     if (!nombre || !email || !asunto || !mensaje)
       reject("Parámetros incorrectos");
-    if (!emailPattern.test(email)) reject("El emailno cumple con el formato");
+    if (!emailPattern.test(email)) reject("El email no cumple con el formato");
     const msgData = {
       name: nombre,
       email,
