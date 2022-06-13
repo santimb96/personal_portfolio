@@ -8,7 +8,7 @@
     </div>
 
     <div class="lenguajes">
-      <h1>Teconologías</h1>
+      <h1>Tecnologías</h1>
       <div v-html="data" class="imagenes"></div>
     </div>
   </section>
