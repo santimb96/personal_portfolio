@@ -30,12 +30,13 @@
         font-size: 2ch;
         resize: none;
 
-        &:focus {
+        &:focus, &:focus-visible {
           outline: none;
+          box-shadow: none;
         }
       }
       input {
-        height: 30px;
+        height: 35px;
       }
     }
   }
@@ -47,5 +48,24 @@
     height: 50px;
     background-color: $letras;
     font-size: 2ch;
+  }
+}
+@media (min-width: $breakpoint-tablet) {
+  .contact-form {
+    .form-body{
+      width: 60%;
+      .form-group{
+        input{
+          height: 50px;
+        }
+      }
+    }
+    .btn-submit {
+      transition: all 0.2s ease;
+      &:hover{
+        background-color: $background_footer;
+        color: white;
+      }
+    }
   }
 }

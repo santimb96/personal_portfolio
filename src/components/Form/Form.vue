@@ -1,5 +1,6 @@
 <template>
-    <SnackbarInfo v-if="success"></SnackbarInfo>
+  <SnackbarInfo v-if="success"></SnackbarInfo>
+  <SnackbarError v-if="error"></SnackbarError>
   <div class="contact-form">
     <div class="form-body">
       <div class="form-group">
@@ -53,10 +54,12 @@
 <script>
 import sendEmail from "../../services/services.js";
 import SnackbarInfo from "../SnackbarInfo/SnackbarInfo.vue";
+import SnackbarError from "../SnackbarError/SnackbarError.vue";
 
 export default {
   components: {
-    SnackbarInfo
+    SnackbarInfo,
+    SnackbarError,
   },
   data() {
     return {
@@ -65,23 +68,37 @@ export default {
       asunto: "",
       mensaje: "",
       emailPattern: new RegExp("[a-z0-9]+@[a-z]+.[a-z]{2,3}"),
-      success: true,
+      success: false,
+      error: false,
     };
   },
+
   methods: {
+    openSnackBarSuccess() {
+      this.success = true;
+      setTimeout(() => {
+        this.success = false;
+      }, 5000).bind(this);
+    },
+    openSnackBarError() {
+      this.error = true;
+      setTimeout(() => {
+        this.error = false;
+      }, 5000).bind(this);
+    },
     enviar() {
       if (this.validar()) {
         sendEmail(this.nombre, this.email, this.asunto, this.mensaje)
           .then((response) => {
-            this.success = true;
+            this.openSnackBar();
             console.log(response);
             this.limpiar();
           })
-          .catch((error) => {
-            console.log(error);
+          .catch(() => {
+            this.openSnackBarError();
           });
       } else {
-        console.error("no valida");
+        this.openSnackBarError();
       }
     },
     validar() {
