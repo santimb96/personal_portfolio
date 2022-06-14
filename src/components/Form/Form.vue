@@ -1,6 +1,6 @@
 <template>
   <SnackbarInfo v-if="success"></SnackbarInfo>
-  <SnackbarError v-if="error"></SnackbarError>
+  <SnackbarError v-else-if="error"></SnackbarError>
   <div class="contact-form">
     <div class="form-body">
       <div class="form-group">
@@ -74,31 +74,16 @@ export default {
   },
 
   methods: {
-    openSnackBarSuccess() {
-      this.success = true;
-      setTimeout(() => {
-        this.success = false;
-      }, 5000).bind(this);
-    },
-    openSnackBarError() {
-      this.error = true;
-      setTimeout(() => {
-        this.error = false;
-      }, 5000).bind(this);
-    },
     enviar() {
       if (this.validar()) {
         sendEmail(this.nombre, this.email, this.asunto, this.mensaje)
-          .then((response) => {
-            this.openSnackBar();
-            console.log(response);
+          .then(() => {
+            this.openSnackBar("success");
             this.limpiar();
           })
-          .catch(() => {
-            this.openSnackBarError();
-          });
+          .catch(() => this.openSnackBar("error"));
       } else {
-        this.openSnackBarError();
+        this.openSnackBar("error");
       }
     },
     validar() {
@@ -114,12 +99,28 @@ export default {
         return true;
       }
     },
+    openSnackBar(value = null) {
+      if (value === "success") {
+        this.success = true;
+        timeOut;
+      } else if (value === "error") {
+        this.error = true;
+        timeOut;
+      } else {
+        this.success = false;
+        this.error = false;
+      }
+      const timeOut = setTimeout(() => {
+        this.success = false;
+        this.error = false;
+        clearTimeout(timeOut);
+      }, 5000);
+    },
     limpiar() {
       this.nombre = "";
       this.email = "";
       this.asunto = "";
       this.mensaje = "";
-      this.success = false;
     },
   },
 };

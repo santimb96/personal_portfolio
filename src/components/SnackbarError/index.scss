@@ -12,7 +12,7 @@
   width: 100%;
   height: 10%;
 }
-.alert-success{
+.alert-danger{
   width: 50%;
   padding: 0;
   margin: 0;
@@ -35,7 +35,7 @@
 @media (max-width: $breakpoint-tablet) {
   .alert-container{
     font-size: 1.5ch;
-    .alert-success{
+    .alert-danger{
       width: 80%;
     }
   }

@@ -31,7 +31,7 @@
 export default {
   data() {
     return {
-      msg: { content: "¡Ha ocurrido un error al enviar el email!" },
+      msg: { content: "¡Ha ocurrido un error al enviar el correo!" },
     };
   },
 };
