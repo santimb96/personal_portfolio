@@ -1,17 +1,17 @@
 <template>
   <div class="contenedor-app-vue">
-    <Header></Header>
+    <Navbar></Navbar>
     <Footer></Footer>
   </div>
 </template>
 <script>
 import Footer from "./components/Footer/Footer.vue";
-import Header from "./components/Header/Header.vue";
+import Navbar from "./components/Navbar/Navbar.vue";
 
 export default {
   components: {
     Footer,
-    Header,
+    Navbar
   },
 };
 </script>
