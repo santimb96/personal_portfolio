@@ -23,15 +23,6 @@
       display: flex;
       justify-content: center;
       margin-right: 10px;
-      // &:focus-within{
-      //   animation-name: button-rotate;
-      //   animation-duration: 2s;
-      // }
-      // @keyframes button-rotate{
-      //   50%, 100%{
-      //     transform: rotate(360deg);
-      //   }
-      // }
 
       svg {
         font-size: 2rem;
@@ -87,11 +78,6 @@
       border-radius: 2px;
       animation-name: links;
       animation-duration: 0.3s;
-
-      // &:hover{
-      //   background: white;
-      //   color: $background;
-      // }
     }
     @keyframes links {
       70% {
@@ -126,8 +112,8 @@
       }
     }
     .navbar-body {
-      position: relative;
       display: flex;
+      position: relative;
       flex-direction: row;
       align-items: center;
       width: 100%;
