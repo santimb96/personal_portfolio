@@ -1,0 +1,80 @@
+@import "../../styles/colores";
+@import "../../styles/breakpoint";
+
+// .custom-card{
+//   .card-content{
+
+//   }
+// }
+
+@media (min-width: $breakpoint-tablet) {
+  .custom-card {
+    position: relative;
+    width: 450px;
+    height: 500px;
+    color: white;
+    border-radius: 5px;
+    .background-img {
+      transition: all 0.2s ease;
+      border-radius: 5px;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+    }
+    .card-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      transition: all 0.4s ease;
+      position: absolute;
+      opacity: 0;
+      h2, p {
+        text-align: center;
+      }
+      .card-text{
+        display: flex;
+        justify-content: center;
+        p{
+          width: 95%;
+        }
+      }
+      button{
+        margin: 15px;
+        width: 100px;
+        transition: all 0.2s ease;
+        color: white;
+        background: transparent;
+        border-radius: 5px;
+        border: 2px solid white;
+        &:hover{
+          background: $background-footer;
+        }
+      }
+    }
+    &:hover {
+      .background-img {
+        filter: blur(2px) brightness(0.6);
+        opacity: 0.8;
+      }
+      .card-content {
+        transform: translateY(0);
+        opacity: 1;
+        animation-name: content-animation;
+        animation-duration: 0.4s;
+      }
+      @keyframes content-animation {
+        from {
+          transform: translateY(200px);
+        }
+        to {
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+}

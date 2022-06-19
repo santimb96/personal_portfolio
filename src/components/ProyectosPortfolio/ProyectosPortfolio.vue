@@ -1,32 +1,17 @@
 <template>
   <div class="proyectos">
-    <div
-      class="carta-proyecto"
-      v-for="portfolio in portfolios"
-      :key="portfolio"
-      @click="
-        portfolio?.despliegue
-          ? goToUri(portfolio?.despliegue)
-          : goToUri(portfolio?.repositorio)
-      "
-    >
-      <img :src="portfolio.imagen" :alt="portfolio.nombre" />
-      <div class="body">
-        <h1>{{ portfolio?.nombre }}</h1>
-        <h3>{{ portfolio?.descripcion }}</h3>
-        <button><a :href="portfolio?.repositorio">Repositorio</a></button>
-        <button v-if="portfolio?.despliegue">
-          <a :href="portfolio?.despliegue">Despliegue</a>
-        </button>
-      </div>
-    </div>
+    <Card v-for="portfolio in portfolios" :key="portfolio" :portfolio="{portfolio}"  />
   </div>
 </template>
 
 <script>
 import { useStore } from "vuex";
+import Card from "../Card/Card.vue";
 
 export default {
+  components: {
+    Card,
+  },
   methods: {
     goToUri(uri) {
       window.open(uri, "_blank");
