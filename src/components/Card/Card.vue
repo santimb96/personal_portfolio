@@ -13,7 +13,7 @@
       </div>
       <div class="card-buttons">
         <button @click="goToUri(repositorio)">Repositorio</button>
-        <button @click="goToUri(despliegue)">
+        <button v-if="despliegue" @click="goToUri(despliegue)">
           Despliegue
         </button>
       </div>

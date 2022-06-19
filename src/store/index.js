@@ -7,13 +7,13 @@ export default createStore({
       trabajos: [
         {
           nombre: "TimeInn",
-          descripcion: "Proyecto en entorno cliente",
+          descripcion: "Segundo proyecto de entorno cliente (DWEC), basado en aplicaciones web de gestión de carteleras de cine como la de aficine.com. En él se trabaja con HTML5, CSS y JavaScript. Además, se hacen uso de utilidades como Local Storage, cookies, Font Awesome, etc.",
           repositorio: "https://github.com/santimb96/timeInn_p2",
           imagen: "../../img/timeinn.png",
         },
         {
           nombre: "SpotiClone",
-          descripcion: "Proyecto de empresa",
+          descripcion: "Proyecto propuesto por la empresa Wozzo (Palma de Mallorca), el cual consiste en hacer una aplicación web en MERN (MongoDB, Express, React, Node) para la gestión de una red social de música.",
           repositorio: "https://github.com/santimb96/music-project-wozzo",
           despliegue: "https://music-project-wozzo-santimb96.vercel.app/",
           imagen: "../../img/spoticlone.png",
@@ -21,14 +21,15 @@ export default createStore({
         {
           nombre: "Whatsagram",
           descripcion:
-            "Imitación de la app de WhatsApp sin interacción por parte de terceros y con determinadas funcionalidades",
+            "Primer proyecto de entorno cliente (DWEC). Imitación de la app de WhatsApp sin interacción con usuarios y/o servidor. únicamente para trabajar con CSS, HTML5 y JavaScript.",
           repositorio: "https://github.com/santimb96/whatsagram_p1",
+          despliegue: "https://modest-heyrovsky-668da4.netlify.app/",
           imagen: "../../img/whatsagram.png",
         },
         {
           nombre: "Barquitos",
           descripcion:
-            "Primer juego web desarrollado",
+            "Primer juego web desarrollado en tiempo libre. El juego consiste en una serie de barquitos que has de ir hundiendo introduciendo unas coordenadas. Está confeccionado con HTML5, CSS Y JavaScript.",
           repositorio: "https://github.com/santimb96/barquitosJS",  
           despliegue: "https://santimb96.github.io/barquitosJS/",
           imagen: "../../img/barquitos.png",

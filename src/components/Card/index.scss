@@ -11,7 +11,7 @@
   .custom-card {
     position: relative;
     width: 450px;
-    height: 500px;
+    height: 65vh;
     color: white;
     border-radius: 5px;
     .background-img {
@@ -36,16 +36,25 @@
       h2, p {
         text-align: center;
       }
+      .card-title{
+        display: flex;
+        justify-content: center;
+        h2{
+          font-size: 6ch;
+        }
+      }
       .card-text{
         display: flex;
         justify-content: center;
         p{
+          font-size: 2ch;
           width: 95%;
         }
       }
       button{
         margin: 15px;
-        width: 100px;
+        width: 150px;
+        height: 40px;
         transition: all 0.2s ease;
         color: white;
         background: transparent;
