@@ -1,67 +1,156 @@
 @import "../../styles/colores";
 @import "../../styles/breakpoint";
 
-// .custom-card{
-//   .card-content{
-
-//   }
-// }
-
-@media (min-width: $breakpoint-tablet) {
-  .custom-card {
-    position: relative;
-    width: 450px;
-    height: 65vh;
-    color: white;
-    border-radius: 5px;
-    .background-img {
-      transition: all 0.2s ease;
-      border-radius: 5px;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-size: cover;
-      background-position: center;
+.custom-card {
+  width: 320px;
+  height: 500px;
+  position: relative;
+  color: white;
+  border-radius: 5px;
+  .mobile-advice {
+    cursor: pointer;
+    z-index: 1;
+    transition: all 0.4s ease;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 10%;
+    background: rgba(255, 255, 255, 0.178);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    p {
+      font-size: 2.5ch;
+      color: white;
+      margin: 0;
+      svg {
+        font-size: 1.5ch;
+      }
     }
-    .card-content {
+  }
+  .background-img {
+    transition: all 0.2s ease;
+    filter: blur(1px) brightness(0.6);
+    border-radius: 5px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  .card-content {
+    z-index: 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s ease;
+    position: absolute;
+    opacity: 0;
+    .card-title {
+      display: flex;
+      justify-content: center;
+      h2 {
+        font-size: 4.5ch;
+      }
+    }
+    .card-text {
+      display: flex;
+      justify-content: center;
+      p {
+        font-size: 1.7ch;
+        width: 80%;
+      }
+    }
+    h2,
+    p {
+      text-align: center;
+    }
+    .card-buttons {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      height: 100%;
-      transition: all 0.4s ease;
-      position: absolute;
-      opacity: 0;
-      h2, p {
-        text-align: center;
-      }
-      .card-title{
-        display: flex;
-        justify-content: center;
-        h2{
-          font-size: 6ch;
-        }
-      }
-      .card-text{
-        display: flex;
-        justify-content: center;
-        p{
-          font-size: 2ch;
-          width: 95%;
-        }
-      }
-      button{
-        margin: 15px;
-        width: 150px;
+      button {
+        margin: 5px;
+        width: 110px;
         height: 40px;
         transition: all 0.2s ease;
         color: white;
-        background: transparent;
+        background: $background-footer;
         border-radius: 5px;
         border: 2px solid white;
-        &:hover{
-          background: $background-footer;
+      }
+    }
+  }
+  &:hover {
+    .mobile-advice {
+      opacity: 0;
+    }
+    .background-img {
+      filter: blur(1.5px) brightness(0.6);
+      opacity: 0.8;
+    }
+    .card-content {
+      display: flex;
+      transform: translateY(0);
+      opacity: 1;
+      animation-name: content-animation;
+      animation-duration: 0.2s;
+    }
+    @keyframes content-animation {
+      from {
+        transform: translateY(100px);
+      }
+      to {
+        transform: translateY(0);
+      }
+    }
+  }
+}
+@media (min-width: $breakpoint_tablet) {
+  .custom-card {
+    width: 450px;
+    height: 65vh;
+    .mobile-advice {
+      display: none;
+    }
+    .background-img {
+      filter: none;
+    }
+    .card-content {
+      display: flex;
+      h2,
+      p {
+        text-align: center;
+      }
+      .card-title {
+        h2 {
+          font-size: 6ch;
+        }
+      }
+      .card-text {
+        p {
+          font-size: 2ch;
+          width: 90%;
+        }
+      }
+      .card-buttons {
+        display: flex;
+        flex-direction: row;
+        button {
+          margin: 10px;
+          width: 150px;
+          height: 40px;
+          transition: all 0.2s ease;
+          color: white;
+          background: transparent;
+          border-radius: 5px;
+          border: 2px solid white;
+          &:hover {
+            background: $background-footer;
+          }
         }
       }
     }

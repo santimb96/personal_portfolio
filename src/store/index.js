@@ -6,9 +6,10 @@ export default createStore({
     portfolio: {
       trabajos: [
         {
-          nombre: "TimeInn",
+          nombre: "Palmimax",
           descripcion: "Segundo proyecto de entorno cliente (DWEC), basado en aplicaciones web de gestión de carteleras de cine como la de aficine.com. En él se trabaja con HTML5, CSS y JavaScript. Además, se hacen uso de utilidades como Local Storage, cookies, Font Awesome, etc.",
           repositorio: "https://github.com/santimb96/timeInn_p2",
+          despliegue: "https://xenodochial-mclean-4eb28c.netlify.app/",
           imagen: "../../img/timeinn.png",
         },
         {
@@ -17,6 +18,13 @@ export default createStore({
           repositorio: "https://github.com/santimb96/music-project-wozzo",
           despliegue: "https://music-project-wozzo-santimb96.vercel.app/",
           imagen: "../../img/spoticlone.png",
+        },
+        {
+          nombre: "PokeDuel",
+          descripcion: "Proyecto de final de ciclo (hecho en 3 semanas), que se basa en un juego simple de combates entre pokémons. Los datos de estos se han obtenido mediante scrapping haciendo uso de Node.js. El proyecto está desarrollado en Angular, Node, Express y MongoDB.",
+          repositorio: "https://github.com/santimb96/pokeDuel-client",
+          despliegue: "https://pokeduel.es",
+          imagen: "../../img/pokeduel.png",
         },
         {
           nombre: "Whatsagram",

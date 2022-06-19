@@ -4,6 +4,9 @@
       class="background-img"
       :style="{ backgroundImage: 'url(' + imagen + ')' }"
     ></div>
+    <div class="mobile-advice">
+      <p><i class="fa fa-plus" aria-hidden="true"></i> Pulsa la carta para ver más</p>
+    </div>
     <div class="card-content">
       <div class="card-title">
         <h2>{{ nombre }}</h2>
@@ -36,13 +39,14 @@ export default {
       descripcion,
       imagen,
       repositorio,
-      despliegue
+      despliegue,
     }
   },
   methods: {
     goToUri(uri) {
       window.open(uri, "_blank");
     },
+
   },
 };
 </script>

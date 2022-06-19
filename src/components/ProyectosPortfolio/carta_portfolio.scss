@@ -15,15 +15,13 @@
   align-items: center;
 }
 
-
-
 .proyectos {
   transform: translateX(0);
   animation-name: proyectos;
   animation-duration: 0.5s;
   position: absolute;
-  top: 15vh;
-  height: 70vh;
+  top: 12vh;
+  height: 66vh;
   overflow-y: scroll;
   width: 100%;
   @extend %display_grid_mobile;
@@ -139,6 +137,7 @@
   .proyectos {
     width: 100%;
     left: 0;
+    height: 70vh;
     display: grid;
     grid-template-columns: auto auto auto;
     place-items: center;
